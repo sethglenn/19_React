@@ -1,30 +1,30 @@
 import React from "react";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import FriendCard from "./components/FriendCard";
-import friends from "./friends.json";
+import Table from "./components/Table"
+import employees from "./employees.json";
 
 function App() {
   return (
     <Wrapper>
-      <Title>Friends List</Title>
+      <Title>employees List</Title>
       <FriendCard
-        name={friends[0].name}
-        image={friends[0].image}
-        occupation={friends[0].occupation}
-        location={friends[0].location}
+        name={employees[0].name}
+        image={employees[0].image} 
+        occupation={employees[0].occupation}
+        location={employees[0].location}
       />
       <FriendCard
-        name={friends[1].name}
-        image={friends[1].image}
-        occupation={friends[1].occupation}
-        location={friends[1].location}
+        name={employees[1].name}
+        image={employees[1].image}
+        occupation={employees[1].occupation}
+        location={employees[1].location}
       />
       <FriendCard
-        name={friends[2].name}
-        image={friends[2].image}
-        occupation={friends[2].occupation}
-        location={friends[2].location}
+        name={employees[2].name}
+        image={employees[2].image}
+        occupation={employees[2].occupation}
+        location={employees[2].location}
       />
     </Wrapper>
   );
