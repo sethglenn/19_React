@@ -1,15 +1,15 @@
 import React from 'react';
 import { Table } from 'reactstrap';
+import "./style.css"
 
 const Example = (props) => {
   return (
     <Table striped>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>{props.first}</td>
-          <td>{props.last}</td>
-          <td>{props.email}</td>
+        <tr className="row">
+          <td id="space">{props.first}</td>
+          <td id="space2" >{props.last}</td>
+          <td id="space3">{props.email}</td>
           </tr>
         </tbody>
     </Table>

@@ -1,21 +1,29 @@
-import React from "react";
+import React, { Component } from "react";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import Table from "./components/Table"
 import employees from "./employees.json";
 import Bar from "./components/Bar"
 
-function App() {
+class App extends Component {
+  state = {
+    employees,
+  }
+
+render() {
   return (
     <Wrapper>
       <Title>Employees List</Title>
       <Bar></Bar>
-      <Table
-        first={employees[0].first}
-        last={employees[0].last}
-        email={employees[0].email}
+      {this.state.employees.map((employee) => (
+        <Table
+        first={employee.first}
+        last={employee.last}
+        email={employee.email}
       />
-    </Wrapper>
+      ))}
+  </Wrapper>
   );
 }
+};
 export default App;
