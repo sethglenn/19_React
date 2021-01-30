@@ -9,7 +9,9 @@ const Example = (props) => {
                 <InputGroupAddon addonType="prepend">
                     <InputGroupText>Search</InputGroupText>
                 </InputGroupAddon>
-                <Input placeholder="username" />
+                <Input placeholder="Search"
+                    onChange={e => context.handleSearchChange(e)}
+                />
             </InputGroup>
         </div>
     )
