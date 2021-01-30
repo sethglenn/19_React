@@ -1,6 +1,19 @@
 import React from 'react';
 import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
-import "./style.css"
+import "./style.css";
+import employees from "../../employees.json"
+import { matchSorter } from 'match-sorter';
+
+
+const handleSearchChange = () => {
+    matchSorter(employees, "first",
+        { threshold: matchSorter.rankings.STARTS_WITH})
+
+    return employees
+        
+};
+
+console.log(employees)
 
 const Example = (props) => {
     return (
@@ -10,7 +23,7 @@ const Example = (props) => {
                     <InputGroupText>Search</InputGroupText>
                 </InputGroupAddon>
                 <Input placeholder="Search"
-                    onChange={e => context.handleSearchChange(e)}
+                    onChange={e => handleSearchChange(e)}
                 />
             </InputGroup>
         </div>
