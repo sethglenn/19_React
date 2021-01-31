@@ -11,11 +11,24 @@ class App extends Component {
     employees,
   }
 
+  // componentDidMount() {
+  //   this.searchEmployees();
+  // }
+
+  handleInputChange = (e) => {
+    if (e.target.first === "search") {
+      const searchInput = e.target.value.toLowerCase();
+      this.setState({
+        search: searchInput
+      });
+    }
+  };
+
 render() {
   return (
     <Wrapper>
       <Title>Employees List</Title>
-      <Search></Search>
+      <Search handleInputChange={this.handleInputChange} search={this.state.search}></Search>
       <Bar></Bar>
       {this.state.employees.map((employee) => (
         <Table

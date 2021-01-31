@@ -1,6 +1,7 @@
 import React from 'react';
 import { Table } from 'reactstrap';
-import "./style.css"
+import "./style.css";
+
 
 const Example = (props) => {
   return (
