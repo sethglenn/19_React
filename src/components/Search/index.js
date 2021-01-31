@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
 import "./style.css";
 import employees from "../../employees.json"
-import { matchSorter } from 'match-sorter';
 
+class change extends Component {
+    state = {
+        sortList: "",
+        results: [],
+        search: ""
+    };
+}
 
-const handleSearchChange = () => {
-    matchSorter(employees, "first",
-        { threshold: matchSorter.rankings.STARTS_WITH})
-
-    return employees
-        
+handleSearchChange = (e) => {
+    if (e.target.name === "search") {
+        const searchInput = e.target.value.toLowerCase();
+        this.setState({
+            search: searchInput
+        });
+    }
 };
 
-console.log(employees)
+
+
+
 
 const Example = (props) => {
     return (
