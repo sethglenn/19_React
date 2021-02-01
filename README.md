@@ -18,7 +18,7 @@ To use this app go to the deployed site. You can search for an employee by name 
   Deployed Application: https://sethglenn.github.io/19_React/
 
   ## Images
-![Screenshot01](./screenshot.png)
+![Screenshot01](./..screenshot.png)
 
 
  ## Questions
